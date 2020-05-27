@@ -7,13 +7,11 @@ class App < Sinatra::Base
     erb :index
   end 
   
-  get '/reversename/:name' do 
-    @name =params[:name].reverse
-    erb :reversename
-    
-    @name
-  end
-  
+  get '/reversename/:name' do
+		@name = params[:name]
+		@name.reverse
+	end
+
   get '/square/:number' do
     @number = params[:number].to_i
     @number = (@number*@number)
