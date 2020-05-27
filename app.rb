@@ -4,6 +4,7 @@ class App < Sinatra::Base
   # Write your code here!
   
   get '/' do 
+    erb :index
   end 
   
   get '/reversename/:name' do 
